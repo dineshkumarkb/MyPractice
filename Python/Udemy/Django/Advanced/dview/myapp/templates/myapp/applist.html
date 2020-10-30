@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'myapp/appbase.html' %}
+
+{% block my_block %}
+
+<h1>Welcome to the list of schools</h1>
+
+<ol>
+{% for school in schools_list %}
+<a href="{{ school.id }}">  <li>{{ school.name }}</li></a>
+
+{% endfor %}
+</ol>
+
+{% endblock %}

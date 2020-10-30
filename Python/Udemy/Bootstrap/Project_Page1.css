@@ -1,0 +1,31 @@
+#mynavbar{
+  font-family: 'Open Sans', sans-serif;
+}
+
+#myjumbo{
+  margin-top: 70px;
+  justify-content: flex-start;
+  margin-left: 70px;
+  margin-right: 70px;
+
+}
+
+p{
+
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+#mypara{
+
+  margin-left: 50px;
+}
+
+.imgpallett{
+  width: 400px;
+  height:400px;
+}
+
+#myfrm{
+  font-family: 'Oswald', sans-serif;
+}

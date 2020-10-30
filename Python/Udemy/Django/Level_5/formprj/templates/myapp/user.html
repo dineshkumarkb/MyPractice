@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% load staticfiles %}
+
+{% block body_block %}
+
+<h1>This is a user page</h1>
+
+<form  method="post" enctype="multipart/form-data">
+
+  {{ user_form.as_p }}
+  {{ profile_form.as_p }}
+  
+
+  {% csrf_token %}
+  <input type="submit" class="btn btn-primary" value="Submit">
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,1 @@
+from .jmock import load_data

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+
+<h1>List of Schools</h1>
+
+{% for school in schools_list %}
+
+<ol>
+  <li>{{ school.name }}</li>
+</ol>
+
+
+
+
+{% endfor %}
+
+{% endblock %}

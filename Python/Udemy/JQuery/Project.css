@@ -1,0 +1,13 @@
+
+
+
+button{
+  width: 75px;
+  height: 75px;
+  background-color: gray;
+  border-color: black;
+  border : 3px;
+  border-style: solid;
+  border-radius: 50px;
+
+}

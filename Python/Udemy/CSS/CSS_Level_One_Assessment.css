@@ -1,0 +1,46 @@
+body{
+  background-color: #7aabf4;
+}
+
+h1{
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+h2{
+  color: purple;
+}
+
+input{
+
+  border: rgb(150,1,1);
+  border-style: solid;
+
+}
+
+p{
+  background-color: #fbfcae;
+}
+
+#textblock{
+  border: 5px;
+  border-style: solid;
+  border-color: gray;
+  width: 800px;
+  height: 400px;
+}
+
+a{
+  color: blue;
+}
+
+a:visited{
+
+  color: red;
+}
+
+#itemone{
+  text-decoration-color: purple;
+  text-decoration-line: overline;
+}

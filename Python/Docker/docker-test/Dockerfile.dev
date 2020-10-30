@@ -1,0 +1,15 @@
+FROM node:alpine
+
+
+
+WORKDIR /usr/react-app
+
+
+COPY ./client/package.json ./
+
+
+RUN npm install
+
+COPY ./client/ ./
+
+CMD ["npm","start"]

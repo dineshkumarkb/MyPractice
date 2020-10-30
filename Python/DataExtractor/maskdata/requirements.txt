@@ -1,0 +1,5 @@
+spacy
+scispacy
+sqlalchemy
+hashlib
+pandas

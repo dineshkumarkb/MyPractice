@@ -1,0 +1,51 @@
+h1{
+
+font-family: 'Oswald', sans-serif;
+text-align: center;
+
+}
+
+table{
+
+  margin:auto;
+
+
+}
+
+td{
+  width: 100px;
+  height: 250px;
+  border: 5px solid white;
+
+
+}
+
+#one{
+
+  background: #75DDDD;
+
+}
+
+#two{
+  background: #9368B7;
+}
+
+#three{
+  background: #AA3E98;
+}
+
+#four{
+  background: #FADF7F;
+}
+
+#five{
+  background: #795C5F;
+}
+
+#six{
+  background: #624CAB;
+}
+
+#seven{
+  background: #C1CEFE;
+}

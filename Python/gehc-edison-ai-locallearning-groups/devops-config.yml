@@ -1,0 +1,84 @@
+---
+
+File: devops-config
+
+Version: 1.0
+
+BasicVars:
+   build_type: python
+   package_type: zip
+   artifact_version: 20.2
+   #aws_region: us-west-2
+   #aws_vpc_id: 039111045627
+   #aws_vpc_id: 551934631674
+   finished_goods_repo:
+   stack_base_name:
+   stack_param_name:
+   additional_finished_goods_repo:
+   aws_upload_files:
+   repo_url: https://github.build.ge.com/GEHC-AI/gehc-edison-ai-locallearning-groups
+   custom_pre_commands: sh build.sh all; pip install -r requirements.txt -t .
+   custom_post_commands: zip -r gehc-edison-ai-locallearning-groups.zip *
+
+PythonVars:
+   python_publish: false
+   python_repo:
+   python_validate_list:
+   python_artifactory_repo:
+   python_publish_base_version:
+   python_runtime_version: 3.6
+
+DockerVars:
+   docker_additional_args:
+   docker_additional_repo:
+   dockerfile_location:
+
+LambdaVars:
+   aws_dev_lambda_name:
+   aws_test_lambda_name:
+   aws_prod_lambda_name:
+
+KpiVars:
+   kpi_build_status_id:
+   kpi_elapsed_time_id:
+
+SonarVars:
+   aws_run_sonar: true
+   enterprise: true
+
+TestingVars:
+   test_component_command:
+   test_contract_command:
+   test_unit_command: pip install -r requirements.txt; py.test --cov-report xml:coverage.xml --cov-report term-missing --cov-branch --cov=. gehc-edison-ai-locallearning-groups/tests/test_*.py
+   test_integration_command:
+
+DevEnvVars:
+   aws_dev_cluster_name:
+   aws_dev_service_name:
+   aws_dev_task_definition:
+
+TestEnvVars:
+   aws_test_cluster_name:
+   aws_test_service_name: 
+   aws_test_task_definition:
+
+ProdEnvVars:
+   aws_prod_cluster_name:
+   aws_prod_service_name:
+   aws_prod_task_definition:
+
+CloudFormationVars:
+   aws_dev_stack_name:
+   aws_dev_stack_parameters:
+   aws_test_stack_name:
+   aws_test_stack_parameters:
+   aws_prod_stack_name:
+   aws_prod_stack_parameters:
+
+DeployVars:
+   update_lambda: false
+   update_integration: false
+   update_production: false
+   aws_update_task_and_service: false
+   aws_update_task_only: false
+   aws_update_service_only: false

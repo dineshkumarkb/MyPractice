@@ -1,0 +1,1 @@
+from .pytest_nice import add_emp, Emp

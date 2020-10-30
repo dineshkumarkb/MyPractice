@@ -1,0 +1,6 @@
+Flask~=1.0.2
+ldap3~=2.7
+pyldap~=2.4.45
+pytest~=5.2.4
+setuptools~=40.8.0
+PyJWT~=1.7.1

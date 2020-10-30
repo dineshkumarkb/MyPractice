@@ -1,0 +1,21 @@
+p{
+
+  color: black;
+
+}
+
+
+body{
+
+   background: yellow;
+
+}
+
+div{
+
+    background: blue;
+    border: black;
+    border-width: 2px;
+    border-style: dashed;
+
+}

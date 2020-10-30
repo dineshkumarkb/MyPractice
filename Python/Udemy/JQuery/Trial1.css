@@ -1,0 +1,22 @@
+.turnBlue{
+  color:blue;
+
+}
+
+.turnRed{
+  color: red;
+}
+
+td{
+
+  width : 70px;
+  height: 70px;
+
+
+}
+
+img{
+  background-color: green;
+  width: 70px;
+  height: 70px;
+}

@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+#!/usr/bin/python
+
+import argparse
+
+
+# class EdisonArgumentParser(argparse.ArgumentParser):
+#
+#     Formatter = argparse.RawTextHelpFormatter
+#
+#     def parse_known_args(self, args=None, namespace=None):
+#         print("Inside parse_known_args")
+#         myargs,mynamespace = super(EdisonArgumentParser, self).parse_known_args(args,namespace)
+#         print(myargs,mynamespace)
+
+
+
+# parser = EdisonArgumentParser(description="MyEdisonCommandlinetool")
+# parser.add_argument("--name",help="Author of this command line")
+# args = parser.parse_args()
+# print("The args are", args)
+
+
+
+
+parser = argparse.ArgumentParser(description="New command line tool")
+parser.add_argument("--name",help="Author of this command line")
+args = parser.parse_args()
+print("The args are",args.name)

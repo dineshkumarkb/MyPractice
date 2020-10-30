@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pyapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/my_python

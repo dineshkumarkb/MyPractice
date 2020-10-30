@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>UserInfo</title>
+  </head>
+  <body>
+
+
+    <div class="container">
+
+        <h1>Welcome to MyForm Page</h1>
+
+        <form  method="post">
+
+          {{ form.as_p }}
+          {% csrf_token %}
+          <input type="submit"  class="btn btn-primary" value="Login">
+
+        </form>
+
+        {% if user_info %}
+        <ol>
+        {% for data in user_info %}
+
+
+          <li>User Information</li>
+          <ul>
+            <li>{{ data.name }}</li>
+            <li>{{ data.email }}</li>
+            <li>{{ data.address }}</li>
+            <li>{{ data.zipcode }}</li>
+          </ul>
+
+
+        {% endfor %}
+            </ol>
+
+
+        {% endif %}
+
+    </div>
+
+
+
+  </body>
+</html>

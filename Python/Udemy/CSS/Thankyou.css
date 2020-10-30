@@ -1,0 +1,32 @@
+body{
+  background-color: #0c3796;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+
+
+}
+
+
+h1{
+
+  color: white;
+
+}
+
+h2{
+  color:white;
+
+}
+
+
+#myid {
+
+
+  border-color: #04d8c3;
+  border-width: 35px;
+  border-style: solid;
+  border-top: hidden;
+
+
+}

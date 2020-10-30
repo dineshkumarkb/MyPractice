@@ -1,0 +1,23 @@
+{% extends 'myapp/appbase.html'%}
+
+{% block my_block %}
+
+<h1>Welcome to school details view </h1>
+<h2>Details : </h2>
+<p>{{schools_details.name}}</p>
+<p>{{schools_details.principal}}</p>
+<p>{{schools_details.location}}</p>
+
+{% for student in schools_details.students.all %}
+
+<p>{{ student.name}}</p>
+
+{% endfor %}
+
+<div class="container">
+
+  <p><a class="btn btn-warning" href="{% url 'myapp:update' pk=schools_details.pk %}">Update</a></p>
+
+</div>
+
+{% endblock %}

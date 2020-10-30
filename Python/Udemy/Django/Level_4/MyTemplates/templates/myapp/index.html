@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "myapp/base.html" %}
+{% load my_tags %}
+
+{% block body_block %}
+<h1>Welcome to the index page</h1>
+<div class="container">
+  <p> The text from index views is {{ mykey| app:' testing appended dec ' }}</p>
+
+</div>
+{% endblock %}
