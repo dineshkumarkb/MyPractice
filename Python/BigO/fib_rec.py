@@ -21,9 +21,8 @@ def fib_non_rec(n):
     fib = 0
 
     for i in range(1,n):
-        fib = a + b
-        a,b = b, fib
-        print(fib)
+        a,b = b, a+b
+        print(b)
 
 
 fib_non_rec(10)
