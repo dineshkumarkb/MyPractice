@@ -2,14 +2,31 @@
 Calculate the sum of n numbers
 """
 
-def add_values(n):
+# def add_values(n):
+#
+#     summ = 0
+#
+#     for i in range(n):
+#         summ += i
+#
+#     return summ
+#
+#
+# print(add_values(1000))
 
-    summ = 0
 
-    for i in range(n):
-        summ += i
+def exception_testing():
 
-    return summ
+    try:
+        x = 10
+        raise TypeError
+        return x
+    except Exception:
+        pass
+    finally:
+        x = 40
+        #return x
 
 
-print(add_values(1000))
+val = exception_testing()
+print(val)
