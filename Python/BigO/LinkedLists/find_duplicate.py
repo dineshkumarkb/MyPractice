@@ -36,6 +36,7 @@ l.insert_node(20)
 l.insert_node(30)
 l.insert_node(40)
 l.insert_node(10)
+l.insert_node(10)
 
 def find_duplicate():
 

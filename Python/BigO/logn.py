@@ -34,4 +34,26 @@ def search(n, lst):
         return search(n, lst)
 
 
-print(search(7, lst = [2,3,4,5,6,7,8,9,10]))
+#print(search(7, lst = [2,3,4,5,6,7,8,9,10]))
+
+
+def search_non_recursive(lst, element):
+
+    low = 0
+    high = len(lst)-1
+
+    while low <= high:
+        pivot = (low + high)//2
+        if element < lst[pivot]:
+            high = pivot - 1
+        elif element > lst[pivot]:
+            low = pivot + 1
+        else:
+            print(lst[pivot])
+            return pivot
+
+
+print(search_non_recursive(lst = [2,3,4,5,6,7,8,9,10], element=10))
+
+
+
