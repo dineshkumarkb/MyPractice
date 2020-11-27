@@ -53,15 +53,49 @@ class LinkedList(object):
                     prev = prev.next
             current = current.next
 
+    def get_kth_node(self, k):
+
+        current = self.head
+        runner = self.head
+
+        for i in range(k):
+            current = current.next
+
+        while current is not None:
+            current = current.next
+            runner = runner.next
+
+        print(runner.data)
+
+    # def delete_node(self, node):
+    #
+    #     print(f" Inside delete node: {node} ")
+    #
+    #     if node is None or node.next is None:
+    #         return None
+    #
+    #     current = node
+    #     print(f" Current is: {current.data}")
+    #     next_node = node.next
+    #     print(f"Next is : {next_node.data}")
+    #
+    #     current.data = next_node.data
+    #     current.next = next_node.next
 
 l = LinkedList()
 l.insert_element(10)
 l.insert_element(20)
 l.insert_element(30)
-l.insert_element(10)
-l.insert_element(30)
+l.insert_element(50)
+l.insert_element(40)
+#l.display_list()
 l.display_list()
-#l.remove_duplicates_buffer()
-l.remove_duplicates_wo_buffer()
 print()
-l.display_list()
+l.get_kth_node(3)
+#l.remove_duplicates_buffer()
+#l.remove_duplicates_wo_buffer()
+#print()
+#l.display_list()
+
+
+
