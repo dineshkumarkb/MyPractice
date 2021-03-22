@@ -1,0 +1,33 @@
+[tool.briefcase]
+project_name = "My App"
+bundle = "com.example.myapp"
+version = "0.0.1"
+url = "https://myapp.example.com/myapp"
+license = "MIT license"
+author = 'Dinesh Kumar'
+author_email = "dineshkumarkb@gmail.com"
+
+[tool.briefcase.app.myapp]
+formal_name = "My App"
+description = "My First App"
+icon = "src/myapp/resources/myapp"
+sources = ['src/myapp']
+requires = []
+
+
+[tool.briefcase.app.myapp.macOS]
+requires = []
+
+[tool.briefcase.app.myapp.linux]
+requires = []
+system_requires = []
+
+[tool.briefcase.app.myapp.windows]
+requires = []
+
+# Mobile deployments
+[tool.briefcase.app.myapp.iOS]
+requires = []
+
+[tool.briefcase.app.myapp.android]
+requires = []

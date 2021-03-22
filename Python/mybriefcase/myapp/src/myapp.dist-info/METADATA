@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.3.4
+Name: myapp
+Formal-Name: My App
+App-ID: com.example.myapp.myapp
+Version: 0.0.1
+Home-page: https://myapp.example.com/myapp
+Author: Dinesh Kumar
+Author-email: dineshkumarkb@gmail.com
+Summary: My First App
