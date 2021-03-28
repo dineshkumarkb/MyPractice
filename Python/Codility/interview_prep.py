@@ -252,7 +252,7 @@ def valid_paren(s):
         return not stack
 
 
-print(valid_paren("()"))
+#print(valid_paren("()"))
 
 
 def remove_duplicates(nums):
@@ -277,15 +277,22 @@ def long_sub(s):
 
     for i in s:
         if i in result:
+            print(f" Inside if condition : {i}")
+            print(result)
             result = result[result.index(i) + 1:]
+            print(result)
 
         result.append(i)
-        print(result)
         length = max(len(result), length)
 
     print(length)
     
-long_sub("bbbbb")
+long_sub("abcabcbb")
+
+
+
+
+
 
 
 
