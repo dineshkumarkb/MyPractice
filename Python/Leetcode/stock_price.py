@@ -61,4 +61,34 @@ def stock(prices):
 
 
 
-stock([100, 18, 260, 310, 40, 535, 695])
+#stock([100, 18, 260, 310, 40, 535, 695])
+
+
+def stock_prices(l):
+
+    if len(l) <= 1:
+        return
+    n = len(l)
+    i = 0
+
+    while i < n-1:
+
+        while i < n-1 and l[i+1] <= l[i]:
+            i += 1
+
+        buy = i
+        i += 1
+
+        while i < n and l[i] >= l[i-1]:
+            print(f" Comparing {l[i]} and {l[i-1]}")
+            i += 1
+
+        sell = i - 1
+
+        print(f" Buy on day {buy} and sell on day {sell} ")
+
+
+stock_prices([100, 180, 260, 310, 40, 535, 695])
+
+
+

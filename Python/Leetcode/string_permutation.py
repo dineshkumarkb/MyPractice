@@ -54,4 +54,39 @@ def is_match(s1, window):
     return False
 
 
-print(check_permutation("ab","eidbaooo"))
+#print(check_permutation("ab","eidbaooo"))
+
+def is_string_perm(s1, s2):
+
+    if not s1 or not s2:
+        return "Invalid string expressions"
+
+    window_size = len(s1)
+
+    for i in range(len(s2)):
+        window = s2[i:i+window_size]
+        if is_perm(s1, window):
+            return True
+
+    return False
+
+
+def is_perm(s1, s2):
+
+    if len(s1) != len(s2):
+        return False
+
+    if s1 == s2:
+        return True
+
+    from collections import Counter
+    print(f" s1 and s2 {s1} and {s2} ")
+    s1_count = Counter(s1)
+    s2_count = Counter(s2)
+
+    if s1_count == s2_count:
+        return True
+
+    return False
+
+print(is_string_perm("ab", "eidbcaoooo"))
