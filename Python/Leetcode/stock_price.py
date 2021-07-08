@@ -88,7 +88,35 @@ def stock_prices(l):
         print(f" Buy on day {buy} and sell on day {sell} ")
 
 
-stock_prices([100, 180, 260, 310, 40, 535, 695])
+#stock_prices([100, 180, 260, 310, 40, 535, 695])
 
 
+def get_stock_prices(lst):
+
+    i = 0
+    n = len(lst)
+
+    while i < n-1:
+
+        print(f"Inside first while {i} < {n-1}")
+
+        while i < n-1 and lst[i+1] <= lst[i]:
+            print(f" Inside second while {lst[i+1]} <= {lst[i]}")
+            i += 1
+
+        if i == n-1:
+            break
+
+        buy = i
+        i += 1
+
+        while i < n and lst[i] > lst[i-1]:
+            print(f" Inside third while: {lst[i]} > {lst[i-1]}")
+            i += 1
+
+        sell = i - 1
+
+        print(f" Buy on day {buy} and sell on day {sell}")
+
+get_stock_prices([100, 180, 260, 310, 40, 535, 695])
 

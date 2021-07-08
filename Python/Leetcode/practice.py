@@ -505,18 +505,89 @@ def is_perm(s, t):
 #print(check_perm("ab","eidbaooo"))
 
 
+class ListNode:
+
+    def __init__(self, val):
+        self.val = val
+        self.next = None
 
 
-my_num = [0,1,2,3,4,5,6,7]
+def make_lst(elements):
 
-#print(my_num[0:3])
+    head = elements[0]
+
+    current = head
+
+    for i in elements[1:]:
+        while current.next:
+            current = current.next
+        current.next = ListNode(i)
+
+    return head
 
 
-def sliding_window(my_lst, window_length):
+def add_nums(l1, l2):
 
-    for i in range(len(my_lst)-window_length+1):
-        print(my_lst[i:window_length+i])
+    head = None
+    temp = None
+    carry = 0
+
+    while l1 or l2:
+
+        if not l1:
+            a = 0
+        else:
+            a = l1.val
+
+        if not l2:
+            b = 0
+        else:
+            b = l2.val
+
+        n = a + b + carry
+
+        if n > 9:
+            carry = 1
+        else:
+            carry = 0
+
+        node = ListNode(n % 10)
+
+        if not head:
+            head = node
+            temp = node
+        else:
+            head.next = node
+            head = node
+
+    if carry:
+        node = ListNode(carry)
+        head.next = node
 
 
-sliding_window(my_num, 3)
+def stock_prices(price_lst):
+
+    n = len(price_lst)
+
+    i = 0
+
+    while i < n-1:
+
+        while i < n-1 and price_lst[i+1] >= price_lst[i]:
+            i += 1
+
+
+        buy = i
+        i += 1
+
+        while i < n and price_lst[i] >= price_lst[i-1]:
+            i += 1
+
+        sell = i - 1
+
+
+
+
+
+
 
